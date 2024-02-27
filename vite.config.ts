@@ -2,14 +2,12 @@ import vue from '@vitejs/plugin-vue'
 import jsx from '@vitejs/plugin-vue-jsx'
 import autoImport from 'unplugin-auto-import/vite'
 import components from 'unplugin-vue-components/vite'
-import pages from 'vite-plugin-pages'
 import compression from 'vite-plugin-compression2'
 import progress from 'vite-plugin-progress'
 import unoCSS from 'unocss/vite'
 import { fileURLToPath, URL } from 'node:url'
 import { VarletImportResolver } from '@varlet/import-resolver'
 import { defineConfig } from 'vitest/config'
-import { extendRoute } from './build/extendRoute'
 import { isProduction } from './build/env'
 
 // Use as needed
@@ -77,15 +75,6 @@ export default defineConfig({
       imports: ['vue', 'vue-router', 'pinia', 'vue-i18n'],
       resolvers: [VarletImportResolver({ autoImport: true })],
       eslintrc: { enabled: true }
-    }),
-
-    pages({
-      extendRoute
-    }),
-
-    pages({
-      dirs: 'src/stacks',
-      moduleId: '~stacks'
     }),
 
     compression({
