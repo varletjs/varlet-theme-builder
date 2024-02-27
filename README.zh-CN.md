@@ -7,6 +7,8 @@
 
 varlet-theme-builder 是一个用于生成 [varlet](https://github.com/varletjs/varlet-theme-builder) 主题变量的主题生成器。通过产品主题色或产品图片智能推导出符合设计系统的配色。算法来自 [material-foundation](https://github.com/material-foundation/material-color-utilities)
 
+注意: 只支持生成 Material Design 3 的主题配色
+
 ### 预览地址
 
 https://varletjs.github.io/varlet-theme-builder

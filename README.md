@@ -7,6 +7,8 @@
 
 varlet-theme-builder is a theme builder for generating [varlet](https://github.com/varletjs/varlet-theme-builder) theme variables. Intelligently derive color matching that matches the design system through product theme colors or product images. The algorithm comes from [material-foundation](https://github.com/material-foundation/material-color-utilities)
 
+Note: Only supports generating theme colors for Material Design 3
+
 ### Preview Address
 
 https://varletjs.github.io/varlet-theme-builder
