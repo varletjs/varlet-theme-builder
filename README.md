@@ -1,103 +1,15 @@
-# varlet-app-template
+# varlet-theme-builder
 
 <span>English</span> |
-<a href="https://github.com/varletjs/varlet-app-template/blob/main/README.zh-CN.md">中文</a>
+<a href="https://github.com/varletjs/varlet-theme-builder/blob/main/README.zh-CN.md">中文</a>
 
 ### Intro
 
-varlet-app-template is an out-of-the-box lightweight mobile web template, developed based on `Vue3`, `Varlet`, `Vite`, `Typescript`.
+varlet-theme-builder is a theme builder for generating [varlet](https://github.com/varletjs/varlet-theme-builder) theme variables. Intelligently derive color matching that matches the design system through product theme colors or product images. The algorithm comes from [material-foundation](https://github.com/material-foundation/material-color-utilities)
 
-### License
+### Preview Address
 
-This project is based on the `MIT` license
-
-### Features
-
-- ⚡️ &nbsp; Developed based on `Vue3`, `Varlet`, `Vite`, `Typescript`
-- 📦 &nbsp; Automatic and on-demand import of built-in component libraries and third-party libraries
-- 🗂 &nbsp; Built-in stack routing navigation similar to native apps
-- 🗂 &nbsp; Built-in conventional routing based on file directory structure
-- 🌍 &nbsp; Built-in application-level internationalization
-- 📦 &nbsp; Built-in request library integrated, support composition api
-- 📦 &nbsp; Built-in theme customization
-- 📦 &nbsp; Built-in mobile debugging tool
-- 📦 &nbsp; Built-in `pinia` for state management
-- 📦 &nbsp; Built-in `mockjs` for data mocking
-- 📦 &nbsp; Built-in `vitest` for unit testing
-- 📦 &nbsp; Built-in `cypress` for e2e testing
-- 📦 &nbsp; Built-in `unocss` integration
-- 📦 &nbsp; Built-in `eslint`, `commitlint`, `lint-staged`, `prettier` and other code checking/formatting tools
-- 💪 &nbsp; Officially maintained by `varletjs`, the first party provides support for `varlet`
-
-### Page Preview Address
-
-https://varletjs.github.io/varlet-app-template
-
-### Install And Use
-
-#### Get Project
-
-[Create a repository from this template repository](https://github.com/varletjs/varlet-app-template/generate)
-
-or
-
-```shell
-git clone https://github.com/varletjs/varlet-app-template.git
-```
-
-#### Install Dependencies
-
-```shell
-pnpm install
-```
-
-#### Start the development environment
-
-```shell
-pnpm dev
-```
-
-#### Build
-
-```shell
-pnpm build
-```
-
-#### Preview
-
-```shell
-pnpm preview
-```
-
-#### Lint Code
-
-```shell
-pnpm lint
-```
-
-#### TS type checking
-
-```shell
-pnpm type-check
-```
-
-#### Code Formatting
-
-```shell
-pnpm format
-```
-
-#### Running unit tests
-
-```shell
-pnpm test
-```
-
-#### Run unit tests and generate test reports
-
-```shell
-pnpm test:coverage
-```
+https://varletjs.github.io/varlet-theme-builder
 
 ### Community
 
@@ -111,8 +23,8 @@ We recommend that `issue` be used for problem feedback, or others:
 
 ### Thanks to contributors
 
-<a href="https://github.com/varletjs/varlet-app-template/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=varletjs/varlet-app-template" />
+<a href="https://github.com/varletjs/varlet-theme-builder/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=varletjs/varlet-theme-builder" />
 </a>
 
 ### Thanks to the following sponsors
