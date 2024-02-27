@@ -85,7 +85,7 @@ async function handleAfterRead(file: VarFile) {
 
 <template>
   <div class="flex flex-col justify-center items-center min-h-screen p-[24px]">
-    <var-input class="w-[300px]" placeholder="e.g. #f82506" variant="outlined" v-model.trim="source">
+    <var-input class="w-[300px] mt-[10px]" placeholder="e.g. #f82506" variant="outlined" v-model.trim="source">
       <template #append-icon>
         <var-uploader hide-list v-model="files" @after-read="handleAfterRead">
           <var-button type="primary">Upload Image</var-button>
@@ -93,7 +93,7 @@ async function handleAfterRead(file: VarFile) {
       </template>
     </var-input>
 
-    <var-button class="mt-[20px]" type="success" v-if="light && dark" @click="copyThemes">Copy Themes</var-button>
+    <var-button class="mt-[30px]" type="success" v-if="light && dark" @click="copyThemes">Copy Themes</var-button>
 
     <var-paper class="p-[30px] mt-[30px]" :elevation="2" :radius="12" v-if="light">
       <div class="text-[22px] pb-[30px] px-[4px]">Light</div>
