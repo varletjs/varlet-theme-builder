@@ -6,7 +6,7 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "postinstall": "simple-git-hooks",
-    "dev": "vite --force",
+    "dev": "vite",
     "build": "vite build",
     "build:test": "vite build --mode test",
     "preview": "vite preview",

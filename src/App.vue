@@ -87,7 +87,7 @@ async function handleAfterRead(file: VarFile) {
   <div class="flex flex-col justify-center items-center min-h-screen p-[24px]">
     <var-input class="w-[300px] mt-[6px]" placeholder="e.g. #f82506" variant="outlined" v-model.trim="source">
       <template #append-icon>
-        <var-uploader hide-list v-model="files" @after-read="handleAfterRead">
+        <var-uploader hide-list v-model="files" @after-read="handleAfterRead" @mousedown.stop>
           <var-button type="primary">Upload Image</var-button>
         </var-uploader>
       </template>
