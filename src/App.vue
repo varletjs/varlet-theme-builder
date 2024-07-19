@@ -9,11 +9,12 @@ import {
 import { useDark } from './use'
 import { useClipboard } from '@vueuse/core'
 import { VarFile } from '@varlet/ui'
+import Color from 'color'
 
-useDark()
+const { toggleDark } = useDark()
 
-const light = ref<Record<string, string>>()
-const dark = ref<Record<string, string>>()
+const light = ref<Record<string, Record<string, string>>>()
+const dark = ref<Record<string, Record<string, string>>>()
 const source = ref('')
 const files = ref([])
 const image = ref<HTMLImageElement>()
@@ -49,10 +50,19 @@ watch(() => source.value, generateSchemes)
 function toHexScheme(scheme: Scheme) {
   return Object.entries(scheme.toJSON()).reduce((scheme, [key, value]) => {
     if (key in tokenMap) {
-      scheme[tokenMap[key as keyof typeof tokenMap]] = hexFromArgb(value)
+      const {
+        color: [h, s, l],
+        valpha
+      } = Color(hexFromArgb(value)).hsl() as any
+      scheme[tokenMap[key as keyof typeof tokenMap]] = {
+        key: tokenMap[key as keyof typeof tokenMap].replace('--color-', ''),
+        color: `hsla(${Math.round(h)}, ${Math.round(s)}%, ${Math.round(l)}%, ${valpha})`,
+        hsl: `${Math.round(h)}, ${Math.round(s)}%, ${Math.round(l)}%`,
+        alpha: valpha
+      }
     }
     return scheme
-  }, {} as Record<string, string>)
+  }, {} as Record<string, Record<string, string>>)
 }
 
 function generateSchemes() {
@@ -66,10 +76,25 @@ function generateSchemes() {
 }
 
 function copyThemes() {
+  const lightTheme = Object.entries(light.value!).reduce((theme, [key, value]) => {
+    const hslKey = key.replace('--color', '--hsl')
+    theme[hslKey] = value.hsl
+    theme[key] = `hsla(var(${hslKey}), ${value.alpha})`
+    return theme
+  }, {} as Record<string, any>)
+
+  const darkTheme = Object.entries(dark.value!).reduce((theme, [key, value]) => {
+    const hslKey = key.replace('--color', '--hsl')
+    theme[hslKey] = value.hsl
+    theme[key] = `hsla(var(${hslKey}), ${value.alpha})`
+    return theme
+  }, {} as Record<string, any>)
+
   const themes = {
-    light: light.value,
-    dark: dark.value
+    light: lightTheme,
+    dark: darkTheme
   }
+
   copy(JSON.stringify(themes, null, 2))
   Snackbar.success('Themes copied!')
 }
@@ -84,37 +109,54 @@ async function handleAfterRead(file: VarFile) {
 </script>
 
 <template>
-  <div class="flex flex-col justify-center items-center min-h-screen p-[24px]">
-    <var-input class="w-[300px] mt-[6px]" placeholder="e.g. #f82506" variant="outlined" v-model.trim="source">
-      <template #append-icon>
-        <var-uploader hide-list v-model="files" @after-read="handleAfterRead" @mousedown.stop>
-          <var-button type="primary">Upload Image</var-button>
-        </var-uploader>
-      </template>
-    </var-input>
+  <div class="w-full flex justify-center">
+    <div class="flex flex-col justify-center items-center min-h-screen p-[40px] lg:p-[80px] max-w-[1400px]">
+      <var-input class="w-[300px" placeholder="e.g. #f82506" variant="outlined" v-model.trim="source">
+        <template #append-icon>
+          <var-uploader hide-list v-model="files" @after-read="handleAfterRead" @mousedown.stop>
+            <var-button type="primary">Upload Image</var-button>
+          </var-uploader>
+        </template>
+      </var-input>
 
-    <var-button class="mt-[30px]" type="success" v-if="light && dark" @click="copyThemes">Copy Themes</var-button>
+      <div class="flex items-center gap-3 mt-11">
+        <var-button type="success" v-if="light && dark" @click="copyThemes">Copy Themes</var-button>
+        <var-button type="primary" icon-container round @click="toggleDark">
+          <var-icon name="palette" :size="24" />
+        </var-button>
+      </div>
 
-    <var-paper class="p-[30px] mt-[30px]" :elevation="2" :radius="12" v-if="light">
-      <div class="text-[22px] pb-[30px] px-[4px]">Light</div>
-      <var-space :size="[24, 24]">
-        <div class="flex flex-col items-center w-[50px]" v-for="i in light" :key="i">
-          <div class="rounded-[50%] w-[40px] h-[40px] mb-[10px]" :style="{ backgroundColor: i }"></div>
-          <div>{{ i }}</div>
+      <var-paper class="p-[30px] mt-[50px]" :elevation="2" :radius="12" v-if="light">
+        <div class="text-[22px] pb-[30px] pt-[4px] px-[4px]">Light</div>
+        <div class="flex flex-wrap gap-8">
+          <div
+            class="flex flex-col items-center flex-col items-center w-full md:w-[200px]"
+            v-for="i in light"
+            :key="i.color"
+          >
+            <div class="w-full h-[44px] rounded-10" :style="{ backgroundColor: i.color }"></div>
+            <div class="mt-3">{{ i.key }}</div>
+            <div class="mt-2">{{ i.color }}</div>
+          </div>
         </div>
-      </var-space>
-    </var-paper>
+      </var-paper>
 
-    <var-paper class="p-[30px] mt-[30px]" :elevation="2" :radius="12" v-if="dark">
-      <div class="text-[22px] pb-[30px] px-[4px]">Dark</div>
-      <var-space :size="[24, 24]">
-        <div class="flex flex-col items-center w-[50px]" v-for="i in dark" :key="i">
-          <div class="rounded-[50%] w-[40px] h-[40px] mb-[10px]" :style="{ backgroundColor: i }"></div>
-          <div>{{ i }}</div>
+      <var-paper class="p-[30px] mt-[50px]" :elevation="2" :radius="12" v-if="dark">
+        <div class="text-[22px] pb-[30px] pt-[4px] pb-[24px] px-[4px]">Dark</div>
+        <div class="flex flex-wrap gap-8">
+          <div
+            class="flex flex-col items-center flex-col items-center w-full md:w-[200px]"
+            v-for="i in dark"
+            :key="i.color"
+          >
+            <div class="w-full h-[44px] rounded-10" :style="{ backgroundColor: i.color }"></div>
+            <div class="mt-3">{{ i.key }}</div>
+            <div class="mt-2">{{ i.color }}</div>
+          </div>
         </div>
-      </var-space>
-    </var-paper>
+      </var-paper>
 
-    <img ref="image" class="opacity-0 fixed left-[-1000px] pointer-events-none" :src="imageUrl" />
+      <img ref="image" class="opacity-0 fixed left-[-1000px] pointer-events-none" :src="imageUrl" />
+    </div>
   </div>
 </template>
