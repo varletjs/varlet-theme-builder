@@ -132,7 +132,7 @@ async function handleAfterRead(file: VarFile) {
           <div
             class="flex flex-col items-center flex-col items-center w-full md:w-[200px]"
             v-for="i in light"
-            :key="i.color"
+            :key="i.key"
           >
             <div class="w-full h-[44px] rounded-10" :style="{ backgroundColor: i.color }"></div>
             <div class="mt-3">{{ i.key }}</div>
@@ -147,7 +147,7 @@ async function handleAfterRead(file: VarFile) {
           <div
             class="flex flex-col items-center flex-col items-center w-full md:w-[200px]"
             v-for="i in dark"
-            :key="i.color"
+            :key="i.key"
           >
             <div class="w-full h-[44px] rounded-10" :style="{ backgroundColor: i.color }"></div>
             <div class="mt-3">{{ i.key }}</div>
