@@ -18,14 +18,14 @@ importers:
         specifier: ^0.0.3
         version: 0.0.3
       '@varlet/touch-emulator':
-        specifier: 3.6.1
-        version: 3.6.1
+        specifier: 3.6.4
+        version: 3.6.4
       '@varlet/ui':
-        specifier: 3.6.1
-        version: 3.6.1(vue@3.3.4)
+        specifier: 3.6.4
+        version: 3.6.4(vue@3.3.4)
       '@varlet/use':
-        specifier: 3.6.1
-        version: 3.6.1(vue@3.3.4)
+        specifier: 3.6.4
+        version: 3.6.4(vue@3.3.4)
       '@vueuse/core':
         specifier: ^10.5.0
         version: 10.5.0(vue@3.3.4)
@@ -79,8 +79,8 @@ importers:
         specifier: ^0.58.2
         version: 0.58.2
       '@varlet/import-resolver':
-        specifier: 3.6.1
-        version: 3.6.1
+        specifier: 3.6.4
+        version: 3.6.4
       '@vitejs/plugin-vue':
         specifier: ^5.0.0
         version: 5.0.0(vite@5.0.10(@types/node@20.2.5)(less@4.1.3))(vue@3.3.4)
@@ -143,7 +143,7 @@ importers:
         version: 0.17.5(@vueuse/core@10.5.0(vue@3.3.4))
       unplugin-vue-components:
         specifier: ^0.26.0
-        version: 0.26.0(@babel/parser@7.25.8)(vue@3.3.4)
+        version: 0.26.0(@babel/parser@7.26.2)(vue@3.3.4)
       vite:
         specifier: ^5.0.10
         version: 5.0.10(@types/node@20.2.5)(less@4.1.3)
@@ -286,8 +286,8 @@ packages:
     resolution: {integrity: sha512-803gmbQdqwdf4olxrX4AJyFBV/RTr3rSmOj0rKwesmzlfhYNDEs+/iOcznzpNWlJlIlTJC2QfPFcHB6DlzdVLQ==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/helper-string-parser@7.25.7':
-    resolution: {integrity: sha512-CbkjYdsJNHFk8uqpEkpCvRs3YRp9tY6FmFY7wLMSYuGYkrdUi7r2lc4/wqsvlHoMznX3WJ9IP8giGPq68T/Y6g==}
+  '@babel/helper-string-parser@7.25.9':
+    resolution: {integrity: sha512-4A/SCr/2KLd5jrtOMFzaKjVtAei3+2r/NChoBNoZ3EyP/+GlhoaEGoWOZUmFmoITP7zOJyHIMm+DYRd8o3PvHA==}
     engines: {node: '>=6.9.0'}
 
   '@babel/helper-validator-identifier@7.19.1':
@@ -298,8 +298,8 @@ packages:
     resolution: {integrity: sha512-Y4OZ+ytlatR8AI+8KZfKuL5urKp7qey08ha31L8b3BwewJAoJamTzyvxPR/5D+KkdJCGPq/+8TukHBlY10FX9A==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/helper-validator-identifier@7.25.7':
-    resolution: {integrity: sha512-AM6TzwYqGChO45oiuPqwL2t20/HdMC1rTPAesnBCgPCSF1x3oN9MVUwQV2iyz4xqWrctwK5RNC8LV22kaQCNYg==}
+  '@babel/helper-validator-identifier@7.25.9':
+    resolution: {integrity: sha512-Ed61U6XJc3CVRfkERJWDz4dJwKe7iLmmJsbOGu9wSloNSFttHV0I8g6UAgb7qnK5ly5bGLPd4oXZlxCdANBOWQ==}
     engines: {node: '>=6.9.0'}
 
   '@babel/helper-validator-option@7.23.5':
@@ -332,8 +332,8 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
 
-  '@babel/parser@7.25.8':
-    resolution: {integrity: sha512-HcttkxzdPucv3nNFmfOOMfFf64KgdJVqm1KaCm25dPGMLElo9nsLvXeJECQg8UzPuBGLyTSA0ZzqCtDSzKTEoQ==}
+  '@babel/parser@7.26.2':
+    resolution: {integrity: sha512-DWMCZH9WA4Maitz2q21SRKHo9QXZxkDsbNZoVD62gusNtNBBqDg9i7uOhASfTfIGNzW+O+r7+jAlM8dwphcJKQ==}
     engines: {node: '>=6.0.0'}
     hasBin: true
 
@@ -393,8 +393,8 @@ packages:
     resolution: {integrity: sha512-+uarb83brBzPKN38NX1MkB6vb6+mwvR6amUulqAE7ccQw1pEl+bCia9TbdG1lsnFP7lZySvUn37CHyXQdfTwzg==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/types@7.25.8':
-    resolution: {integrity: sha512-JWtuCu8VQsMladxVz/P4HzHUGCAwpuqacmowgXFs5XjxIgKuNjnLokQzuVjlTvIzODaDmpjT3oxcC48vyk9EWg==}
+  '@babel/types@7.26.0':
+    resolution: {integrity: sha512-Z/yiTPj+lDVnF7lWeKCIJzaIkI0vYO87dMpZ4bg4TDrFe4XXLFWL1TbXU27gBP3QccxV9mZICCrnjnYlJjXHOA==}
     engines: {node: '>=6.9.0'}
 
   '@colors/colors@1.5.0':
@@ -1062,28 +1062,28 @@ packages:
   '@varlet/bounce-fixer@0.0.3':
     resolution: {integrity: sha512-W0V7xCnPMIE6WOIZeG2U3lPxO5sVMXx5m5+00kMQ4DNY9097Wccld4igwO7U05pyMbAbHX0e8HyE+SkXKBm4wQ==}
 
-  '@varlet/icons@3.6.1':
-    resolution: {integrity: sha512-8ibwr8lhGPoeCZOi7911FTHam1xTJMBW+z6eNlww7jSYkWJ5YatQ0xvEACYDr5HlG9zY7RtDqOS8ThuR0ZMWwg==}
+  '@varlet/icons@3.6.4':
+    resolution: {integrity: sha512-8x95jsw4GnolcrrPsVJvb2c3HWVs3qiPIIEY3nEjuaC8jJEnrDQNBEtvSF6myaaoiiUL5TfHqd7joEHsL7Tdgg==}
 
-  '@varlet/import-resolver@3.6.1':
-    resolution: {integrity: sha512-/0GMK00x8kxXYDIRMyrWM9kBnQ15U79QgL4X91omN8nEo91YhXrOqt4ZZekNjZ9cH1dRo9LoKOIOR9dDXXRFhg==}
+  '@varlet/import-resolver@3.6.4':
+    resolution: {integrity: sha512-g6wI8jpa7AjkdYJpTM42ngdDtccvYcCGL5VRUnUzlL7QW9J77k1U7DFEZyjVZ9lMTU2SN1YPaYhUBM0euftEaA==}
 
   '@varlet/shared@2.20.3':
     resolution: {integrity: sha512-MgLDRYfrGgKqu8Vg2kfRVRGRZE2d8CH0f75vph5h4AG+Clm+A7FgUZLaVTriMWuS6wXrrrceSgX5kNmb/lFShQ==}
 
-  '@varlet/shared@3.6.1':
-    resolution: {integrity: sha512-1UYk/rrYcZmxv9DPXY6UfPNMaJZkkC3jr0rrMSZAN+FZAtPsudP7cODxePykMmSNh9Osfwzz33S2BamNKwoNYA==}
+  '@varlet/shared@3.6.4':
+    resolution: {integrity: sha512-Ns30ZEPfu9lwzBLzLQzNytyT9K910t9+Y7XOUNuO3iMvxym8pvOjTOr5xwQu+ToFime+Shll/dSeqispYQT3Dw==}
 
-  '@varlet/touch-emulator@3.6.1':
-    resolution: {integrity: sha512-EhkMz6nKBNyw8myDR27j9YA5WeX3UlF1O2xgl1PwSYdB2vvgCRZlsxs9lnMEDCZPX+FeYyPVpmdxFQi3sylpXA==}
+  '@varlet/touch-emulator@3.6.4':
+    resolution: {integrity: sha512-BZpoP0Ddykn1oyhNb2b57oMlvMQ/Y2hifC9oGzSv37NDmMdRHMiatjqeih4vX6bsS9/+fnmIkBNTs6d1e7vDDw==}
 
-  '@varlet/ui@3.6.1':
-    resolution: {integrity: sha512-hpAVcjwJtXlk5rYMkJRxFfOkTLFYeHw9AgG+vmNCY+KH+VzNF/gAESBV+ZWQqShHZstJBY2jXCLG7TJ1foxSvA==}
+  '@varlet/ui@3.6.4':
+    resolution: {integrity: sha512-mWDLmNlQjzI4K/5UzIZ18WHYUJKcBCADCeXVrevjlGLyazl0ppzfJJWoT3zUy9RXdS2tZ0VQK1iCgYiqMLnMyA==}
     peerDependencies:
       vue: ^3.2.0
 
-  '@varlet/use@3.6.1':
-    resolution: {integrity: sha512-PFYuS5PxWiTPWqB6rM8XWsQEstUOG1YY3KgDNzgEsMF0kPUeCibfKPW80evTC6EFzKqOSYwodRO9vSNYEFhHTQ==}
+  '@varlet/use@3.6.4':
+    resolution: {integrity: sha512-g6llQ0A3w3KJ2J0lF2lNO6U58rNG3EeZs5xmlr1tYy3+2wDlLK39xUOO322pV0a9bQMXq2N9D3BNW+5exrDIGg==}
     peerDependencies:
       vue: ^3.2.0
 
@@ -2911,6 +2911,9 @@ packages:
     resolution: {integrity: sha512-jYofLM5Dam9279rdkWzqHozUo4ybjdZmCsDHePy5V/PbBcVMiSZR97gmAy45aqi8CK1lG2ECd356FU86avfwUQ==}
     engines: {node: '>=16 || 14 >=14.17'}
 
+  mitt@3.0.1:
+    resolution: {integrity: sha512-vKivATfr97l2/QBCYAkXYDbrIWPM2IIKEl7YPhjCvKlG3kE2gm+uBo6nEXK3M5/Ffh/FLpKExzOQ3JJoJGFKBw==}
+
   mlly@1.3.0:
     resolution: {integrity: sha512-HT5mcgIQKkOrZecOjOX3DJorTikWXwsBfpcr/MGBkhfWcjiqvnaL/9ppxvIUXfjT6xt4DVIAsN9fMUz1ev4bIw==}
 
@@ -3145,8 +3148,8 @@ packages:
   picocolors@1.0.0:
     resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
 
-  picocolors@1.1.0:
-    resolution: {integrity: sha512-TQ92mBOW0l3LeMeyLV6mzy/kWr8lkd/hp3mTg7wYK7zJhuBStmGMBG0BdeDZS/dZx1IukaX6Bk11zcln25o1Aw==}
+  picocolors@1.1.1:
+    resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
 
   picomatch@2.3.1:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
@@ -3275,6 +3278,10 @@ packages:
   quick-lru@4.0.1:
     resolution: {integrity: sha512-ARhCpm70fzdcvNQfPoy49IaanKkTlRWF2JMzqhcJbhSFRZv7nPTvZJdcY7301IPmvW+/p0RgIWnQDLJxifsQ7g==}
     engines: {node: '>=8'}
+
+  rattail@1.0.0:
+    resolution: {integrity: sha512-ccYN21TuJWxP4/XI0BfYcc9NFE+wvNk5tT4J4oyYMG3vUryiW218NZdXAbtp6C1L4IZLjdCW/dFz1Ym4WwBGFA==}
+    engines: {pnpm: '>=9.0'}
 
   rd@2.0.1:
     resolution: {integrity: sha512-/XdKU4UazUZTXFmI0dpABt8jSXPWcEyaGdk340KdHnsEOdkTctlX23aAK7ChQDn39YGNlAJr1M5uvaKt4QnpNw==}
@@ -4249,14 +4256,14 @@ snapshots:
 
   '@babel/helper-string-parser@7.23.4': {}
 
-  '@babel/helper-string-parser@7.25.7':
+  '@babel/helper-string-parser@7.25.9':
     optional: true
 
   '@babel/helper-validator-identifier@7.19.1': {}
 
   '@babel/helper-validator-identifier@7.22.20': {}
 
-  '@babel/helper-validator-identifier@7.25.7':
+  '@babel/helper-validator-identifier@7.25.9':
     optional: true
 
   '@babel/helper-validator-option@7.23.5': {}
@@ -4295,9 +4302,9 @@ snapshots:
     dependencies:
       '@babel/types': 7.23.6
 
-  '@babel/parser@7.25.8':
+  '@babel/parser@7.26.2':
     dependencies:
-      '@babel/types': 7.25.8
+      '@babel/types': 7.26.0
     optional: true
 
   '@babel/plugin-syntax-jsx@7.22.5(@babel/core@7.23.6)':
@@ -4387,11 +4394,10 @@ snapshots:
       '@babel/helper-validator-identifier': 7.22.20
       to-fast-properties: 2.0.0
 
-  '@babel/types@7.25.8':
+  '@babel/types@7.26.0':
     dependencies:
-      '@babel/helper-string-parser': 7.25.7
-      '@babel/helper-validator-identifier': 7.25.7
-      to-fast-properties: 2.0.0
+      '@babel/helper-string-parser': 7.25.9
+      '@babel/helper-validator-identifier': 7.25.9
     optional: true
 
   '@colors/colors@1.5.0':
@@ -5121,31 +5127,33 @@ snapshots:
 
   '@varlet/bounce-fixer@0.0.3': {}
 
-  '@varlet/icons@3.6.1': {}
+  '@varlet/icons@3.6.4': {}
 
-  '@varlet/import-resolver@3.6.1':
+  '@varlet/import-resolver@3.6.4':
     dependencies:
-      '@varlet/shared': 3.6.1
+      '@varlet/shared': 3.6.4
 
   '@varlet/shared@2.20.3': {}
 
-  '@varlet/shared@3.6.1': {}
+  '@varlet/shared@3.6.4':
+    dependencies:
+      rattail: 1.0.0
 
-  '@varlet/touch-emulator@3.6.1': {}
+  '@varlet/touch-emulator@3.6.4': {}
 
-  '@varlet/ui@3.6.1(vue@3.3.4)':
+  '@varlet/ui@3.6.4(vue@3.3.4)':
     dependencies:
       '@popperjs/core': 2.11.8
-      '@varlet/icons': 3.6.1
-      '@varlet/shared': 3.6.1
-      '@varlet/use': 3.6.1(vue@3.3.4)
+      '@varlet/icons': 3.6.4
+      '@varlet/shared': 3.6.4
+      '@varlet/use': 3.6.4(vue@3.3.4)
       dayjs: 1.11.8
       decimal.js: 10.4.3
       vue: 3.3.4
 
-  '@varlet/use@3.6.1(vue@3.3.4)':
+  '@varlet/use@3.6.4(vue@3.3.4)':
     dependencies:
-      '@varlet/shared': 3.6.1
+      '@varlet/shared': 3.6.4
       vue: 3.3.4
 
   '@vitejs/plugin-vue-jsx@3.1.0(vite@5.0.10(@types/node@20.2.5)(less@4.1.3))(vue@3.3.4)':
@@ -5252,7 +5260,7 @@ snapshots:
 
   '@vue/compiler-core@3.5.12':
     dependencies:
-      '@babel/parser': 7.25.8
+      '@babel/parser': 7.26.2
       '@vue/shared': 3.5.12
       entities: 4.5.0
       estree-walker: 2.0.2
@@ -5290,7 +5298,7 @@ snapshots:
 
   '@vue/compiler-sfc@3.5.12':
     dependencies:
-      '@babel/parser': 7.25.8
+      '@babel/parser': 7.26.2
       '@vue/compiler-core': 3.5.12
       '@vue/compiler-dom': 3.5.12
       '@vue/compiler-ssr': 3.5.12
@@ -7288,6 +7296,8 @@ snapshots:
 
   minipass@7.0.4: {}
 
+  mitt@3.0.1: {}
+
   mlly@1.3.0:
     dependencies:
       acorn: 8.8.2
@@ -7515,7 +7525,7 @@ snapshots:
 
   picocolors@1.0.0: {}
 
-  picocolors@1.1.0: {}
+  picocolors@1.1.1: {}
 
   picomatch@2.3.1: {}
 
@@ -7565,7 +7575,7 @@ snapshots:
   postcss@8.4.47:
     dependencies:
       nanoid: 3.3.7
-      picocolors: 1.1.0
+      picocolors: 1.1.1
       source-map-js: 1.2.1
 
   prelude-ls@1.1.2: {}
@@ -7623,6 +7633,10 @@ snapshots:
   queue-microtask@1.2.3: {}
 
   quick-lru@4.0.1: {}
+
+  rattail@1.0.0:
+    dependencies:
+      mitt: 3.0.1
 
   rd@2.0.1:
     dependencies:
@@ -8175,7 +8189,7 @@ snapshots:
     transitivePeerDependencies:
       - rollup
 
-  unplugin-vue-components@0.26.0(@babel/parser@7.25.8)(vue@3.3.4):
+  unplugin-vue-components@0.26.0(@babel/parser@7.26.2)(vue@3.3.4):
     dependencies:
       '@antfu/utils': 0.7.6
       '@rollup/pluginutils': 5.1.0
@@ -8189,7 +8203,7 @@ snapshots:
       unplugin: 1.7.1
       vue: 3.3.4
     optionalDependencies:
-      '@babel/parser': 7.25.8
+      '@babel/parser': 7.26.2
     transitivePeerDependencies:
       - rollup
       - supports-color
